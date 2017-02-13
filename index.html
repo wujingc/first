@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>2048</title>
+    <link rel="stylesheet" type="text/css" href="css/2048.css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> 
+    <script src="http://mst.vip.com/bower_component/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="js/my.js"></script> 
+   
+</head>
+<body style="font-size:16px;">
+    <script>
+    $(function(){
+         var adapt=function(){
+         var rem=$(".wrap").width()/640*100+'px';  //width()/640 =1;
+         $("html").css("font-size",rem);            //rem=100,这里HTML的font-size就是100，所以1rem=100px；
+        }
+    adapt();
+    $(window).resize(adapt);
+    })
+    </script>
+    <div class="wrap">
+    <header>
+        <h3>电脑端：向上w向下s向左a向右d</h3>
+        <h1>2048</h1>
+        <a   onclick="window.location.reload();" id="newgamebutton">New Game</a>
+        <p>score : <span id="score">0</span></p>
+    </header>
+
+    <div id="grid-container">
+        <div class="grid-cell number-cell" id="grid-cell-0-0" ></div>
+        <div class="grid-cell number-cell" id="grid-cell-0-1" ></div>
+        <div class="grid-cell number-cell" id="grid-cell-0-2" ></div>
+        <div class="grid-cell number-cell" id="grid-cell-0-3" ></div>
+
+        <div class="grid-cell number-cell" id="grid-cell-1-0"></div>
+        <div class="grid-cell number-cell" id="grid-cell-1-1"></div>
+        <div class="grid-cell number-cell" id="grid-cell-1-2"></div>
+        <div class="grid-cell number-cell" id="grid-cell-1-3"></div>
+
+        <div class="grid-cell number-cell" id="grid-cell-2-0"></div>
+        <div class="grid-cell number-cell" id="grid-cell-2-1"></div>
+        <div class="grid-cell number-cell" id="grid-cell-2-2"></div>
+        <div class="grid-cell number-cell" id="grid-cell-2-3"></div>
+
+        <div class="grid-cell number-cell" id="grid-cell-3-0"></div>
+        <div class="grid-cell number-cell" id="grid-cell-3-1"></div>
+        <div class="grid-cell number-cell" id="grid-cell-3-2"></div>
+        <div class="grid-cell number-cell" id="grid-cell-3-3"></div>
+
+         <div class="hid">
+        <div class="over">游戏结束</div>
+        <div class="win">顺利闯关你真厉害</div>
+        </div>
+    </div>
+   
+  </div>
+</body>
+</html>
