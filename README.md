@@ -1,2 +1,2 @@
-# first
-first project in my career
+# 2048 game
+a mini game
